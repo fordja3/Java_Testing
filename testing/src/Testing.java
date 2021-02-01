@@ -75,4 +75,11 @@ public class Testing {
     
   }
 
+  @Test
+  public void firstElementTest(){
+    int[] x = new int[]{4, 3, 2, 1};
+    assertEquals(Finder.firstElement(x, 3), 1);
+    
+  }
+
 }
