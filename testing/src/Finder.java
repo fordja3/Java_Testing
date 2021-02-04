@@ -1,6 +1,6 @@
 public class Finder {
 
-    public static int firstElement(int[] x, int element)
+    public int firstElement(int[] x, int element)
     {
         for (int i = 0; i < x.length; i++)
         {
@@ -11,5 +11,4 @@ public class Finder {
         }
         return -1;
     }
-    
 }
