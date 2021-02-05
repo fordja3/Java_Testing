@@ -21,7 +21,9 @@ public class ParameterTest {
       Arguments.of(new int[]{1,2,3,4,5,6}, 3, 2),
       Arguments.of(new int[]{1,1,1,1,2,1,1}, 2, 4),
       Arguments.of(new int[]{1,2,3,4,5,6,7}, 8, -1),
-      Arguments.of(new int[]{3,2,4,3,2,7,5,2,-1}, -1, 8)
+      Arguments.of(new int[]{3,2,4,3,2,7,5,2,-1}, -1, 8),
+      Arguments.of(new int[]{2,2,2,2,2,2,2}, 2, 0)
+
     );
   }
     
