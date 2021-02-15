@@ -2,9 +2,9 @@ import java.util.BitSet;
 
 public class Bits {
 
-    BitSet bt = new BitSet();
+    private BitSet bt = new BitSet();
 
-    public void BitSet(int nbits){
+    public void BitSet(int nbits) {
         try {
             bt = new BitSet(nbits);
             System.out.println(bt.toString());
@@ -20,13 +20,12 @@ public class Bits {
     public void set(int bitIndex){
 
         try {
-                bt.set(bitIndex, true);
-                System.out.println(bt.toString() + " set at " + bitIndex);
-
-            } 
-            catch (IndexOutOfBoundsException err) {
-                System.out.println(err.toString());
-            }
+            bt.set(bitIndex, true);
+            System.out.println(bt.toString() + " set at " + bitIndex);
+        } 
+        catch (IndexOutOfBoundsException err) {
+            System.out.println(err.toString());
+        }
     }
     //Sets the bit at the specified index to true.
     //Parameters: bitIndex - a bit index
@@ -34,7 +33,7 @@ public class Bits {
     public boolean get(int bitIndex){
         try {
             bt.get(bitIndex);
-            System.out.println("got at " + 5);
+            System.out.println( bt.toString() + " got at " + bitIndex);
             return true;
         } 
         catch (IndexOutOfBoundsException err) {
@@ -51,7 +50,7 @@ public class Bits {
     public void flip(int bitIndex){
         try {
             bt.flip(bitIndex);
-            System.out.println("flipped to " + bitIndex);
+            System.out.println(bt.toString() + " flipped to " + bitIndex);
 
         } 
         catch (IndexOutOfBoundsException err) {
@@ -61,19 +60,24 @@ public class Bits {
     //Sets the bit at the specified index to the complement of its current value.
     //Parameters: bitIndex - the index of the bit to flip
     //Throws: IndexOutOfBoundsException - if the specified index is negative
+    @Override
+    public String toString(){
+        return bt.toString();
+    }
 
     public static void main(String[] args) {
         
         Bits bit = new Bits();
-        bit.BitSet(5);
-
+        Bits bit2 = new Bits();
+        
+        bit.set(0);
+        bit.set(1);
         bit.set(2);
-        bit.set(3);
 
-        bit.flip(1);
-        bit.get(5);
+        bit2.set(3);
+        bit2.set(4);
+        bit2.set(5);    
 
-        System.out.println(bit.bt);
 
     }
 }
