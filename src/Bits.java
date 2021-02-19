@@ -68,18 +68,7 @@ public class Bits {
 
     public static void main(String[] args) {
         
-        Bits bit = new Bits();
-        Bits bit2 = new Bits();
-        
-        bit.set(0);
-        bit.set(1);
-        bit.set(2);
-
-        bit2.set(3);
-        bit2.set(4);
-        bit2.set(5);    
-
-
+   
     }
 }
 

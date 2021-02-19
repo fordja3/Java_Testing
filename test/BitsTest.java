@@ -20,9 +20,13 @@ public class BitsTest {
 		bit.set(1);
 		assertEquals(bit.toString(), "{1}");
 
+		bit.set(0);
+		assertEquals(bit.toString(), "{0, 1}");
+
 		IndexOutOfBoundsException out = new IndexOutOfBoundsException();
 		bit.set(-1);
 		assertEquals(out.toString(), "java.lang.IndexOutOfBoundsException");
+		
 	}
 
 	@Test
@@ -46,6 +50,7 @@ public class BitsTest {
 		// flips them back to false
 		bit.flip(2);
 		bit.flip(4);
+
 		assertEquals(bit.toString(), "{}");
 
 		
@@ -54,22 +59,20 @@ public class BitsTest {
 		// flips them back to false
 		bit.flip(1);
 		bit.flip(5);
-		
 		// flips them back to true
 		bit.flip(1);
 		bit.flip(5);
+
 		assertEquals(bit.toString(), "{1, 5}");
+
+		bit.flip(0);
+
+		assertEquals(bit.toString(), "{0, 1, 5}");
 
 
 		IndexOutOfBoundsException out = new IndexOutOfBoundsException();
 		bit.get(-1);
 		assertEquals(out.toString(), "java.lang.IndexOutOfBoundsException");
-
-	}
-
-	@Test
-	public void testMain() throws Exception {
-		
 
 	}
 
