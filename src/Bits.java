@@ -60,6 +60,7 @@ public class Bits {
     //Sets the bit at the specified index to the complement of its current value.
     //Parameters: bitIndex - the index of the bit to flip
     //Throws: IndexOutOfBoundsException - if the specified index is negative
+
     @Override
     public String toString(){
         return bt.toString();

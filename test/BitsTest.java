@@ -69,6 +69,7 @@ public class BitsTest {
 
 	@Test
 	public void testMain() throws Exception {
+		
 
 	}
 
