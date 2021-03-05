@@ -49,7 +49,7 @@ public class LCSTest {
 
 		assertEquals(tstr, "PSSP") ;	
 
-		// returns nothing because no char are in string x are in string y
+		// returns nothing because no characters exist in both string x and in string y
 		String k = "abcdefg";
 		String l = "hijklmnop";
 
